@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de JavaScript</title>
+</head>
+<body>
+    <script>
+        // ejercicio 1 estructuras secuenciales
+        let lado = prompt("Ingrese el lado del cuadrado:");
+        lado = parseFloat(lado); // Convertir a número
+        if (!isNaN(lado)) {
+            document.write(`El perímetro del cuadrado es: ${lado * 4}`);
+        } else {
+            document.write("Por favor ingrese un número válido.");
+        }
+
+        // ejercicio 2
+        let alumno1 = parseFloat(prompt("Ingrese la nota del alumno 1:"));
+        let alumno2 = parseFloat(prompt("Ingrese la nota del alumno 2:"));
+        let alumno3 = parseFloat(prompt("Ingrese la nota del alumno 3:"));
+        let alumno4 = parseFloat(prompt("Ingrese la nota del alumno 4:"));
+        let alumno5 = parseFloat(prompt("Ingrese la nota del alumno 5:"));
+        let alumno6 = parseFloat(prompt("Ingrese la nota del alumno 6:"));
+        let alumno7 = parseFloat(prompt("Ingrese la nota del alumno 7:"));
+        let alumno8 = parseFloat(prompt("Ingrese la nota del alumno 8:"));
+        let alumno9 = parseFloat(prompt("Ingrese la nota del alumno 9:"));
+        let alumno10 = parseFloat(prompt("Ingrese la nota del alumno 10:"));
+        
+        let promedio = (alumno1 + alumno2 + alumno3 + alumno4 + alumno5 + alumno6 + alumno7 + alumno8 + alumno9 + alumno10) / 10;
+        document.write(`<br>El promedio de las notas es: ${promedio}`);
+
+        // ejercicio 3
+        let number1 = parseFloat(prompt("Ingrese el primer número:"));
+        let number2 = parseFloat(prompt("Ingrese el segundo número:"));
+        let number3 = parseFloat(prompt("Ingrese el tercer número:"));
+        let number4 = parseFloat(prompt("Ingrese el cuarto número:"));
+        
+        document.write(`<br>Suma de los dos primeros números: ${number1 + number2}`);
+        document.write(`<br>Producto de los dos últimos números: ${number3 * number4}`);
+
+        // ejercicio 4
+        let precioArticulo = parseFloat(prompt("Ingrese el precio del artículo:"));
+        let cantidadArticulos = parseInt(prompt("Ingrese la cantidad de artículos:"));
+        if (!isNaN(precioArticulo) && !isNaN(cantidadArticulos)) {
+            let totalPagar = precioArticulo * cantidadArticulos;
+            document.write(`<br>Total a pagar: $${totalPagar}`);
+        } else {
+            document.write("<br>Por favor ingrese valores numéricos válidos.");
+        }
+
+        // ejercicio 5 estructuras condicionales simples
+        let nota1 = parseFloat(prompt("Ingrese la primera nota:"));
+        let nota2 = parseFloat(prompt("Ingrese la segunda nota:"));
+        let nota3 = parseFloat(prompt("Ingrese la tercera nota:"));
+        let promedioNotas = (nota1 + nota2 + nota3) / 3;
+        
+        document.write(`<br>El promedio es: ${promedioNotas}`);
+        if (promedioNotas >= 7) {
+            document.write("<br>El alumno ha promocionado.");
+        } else {
+            document.write("<br>El alumno no ha promocionado.");
+        }
+
+        // ejercicio 6
+        let clave1 = prompt("Ingrese clave 1:");
+        let clave2 = prompt("Ingrese clave 2:");
+        if (clave1 === clave2) {
+            document.write("<br>Las claves son iguales.");
+        } else {
+            document.write("<br>Las claves son diferentes.");
+        }
+
+        // ejercicio 7
+        let sueldo = parseFloat(prompt("Ingrese el sueldo del empleado:"));
+        let antiguedad = parseInt(prompt("Ingrese la antigüedad del empleado en años:"));
+        
+        if (sueldo < 500 && antiguedad >= 10) {
+            let aumento = sueldo * 0.20;
+            let nuevoSueldo = sueldo + aumento;
+            document.write(`<br>Se le otorgó un aumento del 20%. El nuevo sueldo es: $${nuevoSueldo}`);
+        } else if (sueldo < 500 && antiguedad < 10) {
+            let aumento = sueldo * 0.05;
+            let nuevoSueldo = sueldo + aumento;
+            document.write(`<br>Se le otorgó un aumento del 5%. El nuevo sueldo es: $${nuevoSueldo}`);
+        } else {
+            document.write(`<br>Su sueldo no requiere aumento. El sueldo actual es: $${sueldo}`);
+        }
+
+        // ejercicio 8
+        let numero1 = parseInt(prompt("Ingrese un número:"));
+        let numero2 = parseInt(prompt("Ingrese otro número:"));
+        if (numero1 < numero2) {
+            document.write(`<br>Suma de los dos números: ${numero1 + numero2}`);
+            document.write(`<br>Diferencia entre el primer y segundo número: ${numero1 - numero2}`);
+        } else {
+            document.write(`<br>Producto de los dos números: ${numero1 * numero2}`);
+            document.write(`<br>División del primer número entre el segundo: ${numero1 / numero2}`);
+        }
+
+        // ejercicio 9
+        let dia = parseInt(prompt("Ingrese el día del mes:"));
+        let mes = parseInt(prompt("Ingrese el mes (en número):"));
+        if (dia === 25 && mes === 12) {
+            document.write("<br>¡Feliz Navidad!");
+        } else {
+            document.write("<br>Hoy no es Navidad.");
+        }
+
+    </script>
+</body>
+</html>
